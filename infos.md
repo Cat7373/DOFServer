@@ -25,9 +25,13 @@
 | 31100 | TCP | √ | × | × | Community 使用 |
 | 40401 | TCP/UDP | √ | × | × | manager 使用 |
 
-# Ips
-> 内部配置中的 IP 均已使用下面三种代码代替，使用前请进行全局替换改为真实 IP
+# 配置
+> 内部配置中部分参数已使用下面的代码代替，使用前请进行全局替换改为实际值
 
-<PublicIP>   外部 IP(对外公开的服务)
-<PrivateIP>  内部 IP(内部使用的服务)
-<DBIP>       数据库 IP
+* &lt;PublicIP&gt;   外部 IP(对外公开的服务)
+* &lt;PrivateIP&gt;  内部 IP(内部使用的服务)
+* &lt;DBIP&gt;       数据库 IP
+* &lt;DBPORT&gt;     数据库端口
+* &lt;DBUSER&gt;     数据库用户名
+* &lt;DBPASS&gt;     数据库密码
+* &lt;DBHASHPASS&gt; 经过 Hash 后的数据库密码 <!-- TODO Hash 算法？ -->
