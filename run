@@ -6,90 +6,93 @@ cd `dirname "$0"`
 # 脚本所在目录
 BASE_DIR=$(pwd)
 
-# 移除 pid 文件和日志
+# 移除 pid 文件、日志、Core 文件
+echo "Start removing junk files."
 find . -name *.pid | xargs rm -fv
 find . -name *.log | xargs rm -fv
-# TODO 移除 core 文件
+find . -name core.* | xargs rm -fv
+echo "End junk file removal."
+sleep 3
 
 # echo "##### stun start #####"
 cd ${BASE_DIR}/stun
-chmod u+x df_stun_r
+chmod +x df_stun_r
 ./df_stun_r start &
 
 # echo "##### monitor start #####"
 cd ${BASE_DIR}/monitor
-chmod u+x df_monitor_r
+chmod +x df_monitor_r
 ./df_monitor_r mnt_cain start &
 
 # echo "##### manager start #####"
 cd ${BASE_DIR}/manager
-chmod u+x df_manager_r
+chmod +x df_manager_r
 ./df_manager_r manager start &
 
 # echo "##### relay start #####"
 cd ${BASE_DIR}/relay
-chmod u+x df_relay_r
+chmod +x df_relay_r
 ./df_relay_r relay_200 start &
 
 # echo "##### bridge start #####"
 cd ${BASE_DIR}/bridge
-chmod u+x df_bridge_r
+chmod +x df_bridge_r
 ./df_bridge_r bridge start &
 
 # echo "##### channel start #####"
 cd ${BASE_DIR}/channel
-chmod u+x df_channel_r
+chmod +x df_channel_r
 ./df_channel_r channel start &
 
 # echo "##### dbmw_guild start #####"
 cd ${BASE_DIR}/dbmw_guild
-chmod u+x df_dbmw_r
+chmod +x df_dbmw_r
 ./df_dbmw_r dbmw_gld_cain start &
 
 # echo "##### dbmw_mnt start #####"
 cd ${BASE_DIR}/dbmw_mnt
-chmod u+x df_dbmw_r
+chmod +x df_dbmw_r
 ./df_dbmw_r dbmw_mnt_cain start &
 
 # echo "##### dbmw_stat start #####"
 cd ${BASE_DIR}/dbmw_stat
-chmod u+x df_dbmw_r
+chmod +x df_dbmw_r
 ./df_dbmw_r dbmw_stat_cain start &
 
 # echo "##### guild start #####"
 cd ${BASE_DIR}/guild
-chmod u+x df_guild_r
+chmod +x df_guild_r
 ./df_guild_r gld_cain start &
 
 # echo "##### statics start #####"
 cd ${BASE_DIR}/statics
-chmod u+x df_statics_r
+chmod +x df_statics_r
 ./df_statics_r stat_cain start &
 
 # echo "##### coserver start #####"
 cd ${BASE_DIR}/coserver
-chmod u+x df_coserver_r
+chmod +x df_coserver_r
 ./df_coserver_r coserver start &
 
 # echo "##### community start #####"
 cd ${BASE_DIR}/community
-chmod u+x df_community_r
+chmod +x df_community_r
 ./df_community_r community start &
 
 # echo "##### gunnersvr start #####"
 cd ${BASE_DIR}/secsvr/gunnersvr
-chmod u+x gunnersvr
+chmod +x gunnersvr
 ./gunnersvr -t30 -i1 &
 
 # echo "##### zergsvr start #####"
 cd ${BASE_DIR}/secsvr/zergsvr
-chmod u+x secagent
-chmod u+x zergsvr
+chmod +x secagent
+chmod +x zergsvr
 ./secagent &
 ./zergsvr -t30 -i1 &
 
 cd ${BASE_DIR}/game
-chmod u+x df_game_r
+chmod +x df_game_r
 
 # echo "##### game start #####"
 sleep 5
