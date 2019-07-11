@@ -1,129 +1,100 @@
+#!/bin/bash
+
+# 跳到当前目录
+cd `dirname "$0"`
+
+# 脚本所在目录
+BASE_DIR=$(pwd)
+
+# 移除 pid 文件和日志
+find . -name *.pid | xargs rm -fv
+find . -name *.log | xargs rm -fv
+# TODO 移除 core 文件
+
 # echo "##### stun start #####"
-cd /home/dxf/stun
-chmod 777 *
-rm -f /home/dxf/stun/pid/*.pid
-rm -rf /home/dxf/stun/log/*.*
+cd ${BASE_DIR}/stun
+chmod u+x df_stun_r
 ./df_stun_r start &
 
-# sleep 3
 # echo "##### monitor start #####"
-cd /home/dxf/monitor
-chmod 777 *
-rm -f /home/dxf/monitor/pid/*.pid
-rm -rf /home/dxf/monitor/log/*.*
+cd ${BASE_DIR}/monitor
+chmod u+x df_monitor_r
 ./df_monitor_r mnt_cain start &
 
-# sleep 3
 # echo "##### manager start #####"
-cd /home/dxf/manager
-chmod 777 *
-rm -f /home/dxf/manager/pid/*.pid
-rm -rf /home/dxf/manager/log/*.*
+cd ${BASE_DIR}/manager
+chmod u+x df_manager_r
 ./df_manager_r manager start &
 
-# sleep 3
 # echo "##### relay start #####"
-cd /home/dxf/relay
-chmod 777 *
-rm -f /home/dxf/relay/pid/*.pid
-rm -rf /home/dxf/relay/log/*.*
+cd ${BASE_DIR}/relay
+chmod u+x df_relay_r
 ./df_relay_r relay_200 start &
 
-# sleep 3
 # echo "##### bridge start #####"
-cd /home/dxf/bridge
-chmod 777 *
-rm -f /home/dxf/bridge/pid/*.pid
-rm -rf /home/dxf/bridge/log/*.*
+cd ${BASE_DIR}/bridge
+chmod u+x df_bridge_r
 ./df_bridge_r bridge start &
 
-# sleep 3
 # echo "##### channel start #####"
-cd /home/dxf/channel
-chmod 777 *
-rm -f /home/dxf/channel/pid/*.pid
-rm -rf /home/dxf/channel/log/*.*
+cd ${BASE_DIR}/channel
+chmod u+x df_channel_r
 ./df_channel_r channel start &
 
-# sleep 3
 # echo "##### dbmw_guild start #####"
-cd /home/dxf/dbmw_guild
-chmod 777 *
-rm -f /home/dxf/dbmw_guild/pid/*.pid
-rm -rf /home/dxf/dbmw_guild/log/*.*
+cd ${BASE_DIR}/dbmw_guild
+chmod u+x df_dbmw_r
 ./df_dbmw_r dbmw_gld_cain start &
 
-# sleep 3
 # echo "##### dbmw_mnt start #####"
-cd /home/dxf/dbmw_mnt
-chmod 777 *
-rm -f /home/dxf/dbmw_mnt/pid/*.pid
-rm -rf /home/dxf/dbmw_mnt/log/*.*
+cd ${BASE_DIR}/dbmw_mnt
+chmod u+x df_dbmw_r
 ./df_dbmw_r dbmw_mnt_cain start &
 
-# sleep 3
 # echo "##### dbmw_stat start #####"
-cd /home/dxf/dbmw_stat
-chmod 777 *
-rm -f /home/dxf/dbmw_stat/pid/*.pid
-rm -rf /home/dxf/dbmw_stat/log/*.*
+cd ${BASE_DIR}/dbmw_stat
+chmod u+x df_dbmw_r
 ./df_dbmw_r dbmw_stat_cain start &
 
-# sleep 3
 # echo "##### guild start #####"
-cd /home/dxf/guild
-chmod 777 *
-rm -f /home/dxf/guild/pid/*.pid
-rm -rf /home/dxf/guild/log/*.*
+cd ${BASE_DIR}/guild
+chmod u+x df_guild_r
 ./df_guild_r gld_cain start &
 
-# sleep 3
 # echo "##### statics start #####"
-cd /home/dxf/statics
-chmod 777 *
-rm -f /home/dxf/statics/pid/*.pid
-rm -rf /home/dxf/statics/log/*.*
+cd ${BASE_DIR}/statics
+chmod u+x df_statics_r
 ./df_statics_r stat_cain start &
 
-# sleep 3
 # echo "##### coserver start #####"
-cd /home/dxf/coserver
-chmod 777 *
-rm -f /home/dxf/coserver/pid/*.pid
-rm -rf /home/dxf/coserver/log/*.*
+cd ${BASE_DIR}/coserver
+chmod u+x df_coserver_r
 ./df_coserver_r coserver start &
 
-# sleep 3
 # echo "##### community start #####"
-cd /home/dxf/community
-chmod 777 *
-rm -f /home/dxf/community/pid/*.pid
-rm -rf /home/dxf/community/log/*.*
+cd ${BASE_DIR}/community
+chmod u+x df_community_r
 ./df_community_r community start &
 
-# sleep 3
 # echo "##### gunnersvr start #####"
-cd /home/dxf/secsvr/gunnersvr
-chmod 777 *
-rm -f /home/dxf/secsvr/gunnersvr/*.pid
+cd ${BASE_DIR}/secsvr/gunnersvr
+chmod u+x gunnersvr
 ./gunnersvr -t30 -i1 &
 
-# sleep 3
 # echo "##### zergsvr start #####"
-cd /home/dxf/secsvr/zergsvr
-chmod 777 *
-rm -f /home/dxf/secsvr/zergsvr/*.pid
-./secagent  &
+cd ${BASE_DIR}/secsvr/zergsvr
+chmod u+x secagent
+chmod u+x zergsvr
+./secagent &
 ./zergsvr -t30 -i1 &
 
-# sleep 3
+cd ${BASE_DIR}/game
+chmod u+x df_game_r
+
 # echo "##### game start #####"
-cd /home/dxf/game
-chmod 777 *
-rm -rf /home/dxf/game/log/*
+sleep 5
 ./df_game_r cain01 start &
 
-# sleep 3
 # echo "##### pvp start #####"
-# ./df_game_r cain02 start &
-
+sleep 120
+./df_game_r cain02 start &

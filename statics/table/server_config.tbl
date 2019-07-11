@@ -1,37 +1,10 @@
-#-------|-------------|-------|---------------|------------------|
-#Type   | Server Group| Index |  Server IP    | Server UDP Port  |
-#-------|-------------|-------|---------------|------------------|
-1       3       1       <PrivateIP>   11011
-1       3       6       <PrivateIP>   11012
-1       3       7       <PrivateIP>   11013
-1       3       11      <PrivateIP>   11014
-1       3       12      <PrivateIP>   11015
-1       3       13      <PrivateIP>   11016
-1       3       14      <PrivateIP>   11017
-1       3       15      <PrivateIP>   11018
-1       3       16      <PrivateIP>   11019
-1       3       17      <PrivateIP>   11020
-1       3       18      <PrivateIP>   11021
-1       3       19      <PrivateIP>   11011
-1       3       20      <PrivateIP>   11012
-1       3       21      <PrivateIP>   11013
-1       3       22      <PrivateIP>   11014
-1       3       23      <PrivateIP>   11015
-1       3       24      <PrivateIP>   11016
-1       3       25      <PrivateIP>   11017
-1       3       26      <PrivateIP>   11018
-1       3       27      <PrivateIP>   11019
-1       3       28      <PrivateIP>   11020
-1       3       29      <PrivateIP>   11021
-1       3       30      <PrivateIP>   11011
-1       3       31      <PrivateIP>   11012
-1       3       32      <PrivateIP>   11013
-1       3       33      <PrivateIP>   11014
-1       3       34      <PrivateIP>   11015
-1       3       35      <PrivateIP>   11016
-1       3       36      <PrivateIP>   11017
-1       3       37      <PrivateIP>   11018
-1       3       38      <PrivateIP>   11019
-1       3       39      <PrivateIP>   11020
-1       3       40      <PrivateIP>   11021
-2       3              200     <PrivateIP>  20303
+# Type ============> 1: GameServer, 2: DB Server, 3: Monitor Server 4: 其它
+# Server Group ====> 1: 卡恩, 2: 狄瑞吉, 3: 希洛克, 4: 普雷, 5: 凱西亞斯, 6: 赫尔德, 99: first server, 98: 开发 Server
+# Index ===========> GameServer 配置中的 channel_no, 60: DB 中繼server, 61: monitor server
+# Server IP =======> 目标 IP
+# Server UDP Port => 目标 UDP 端口
+
+#-------|------------- |-------|-----------------|------------------|
+# Type  | Server Group | Index | Server IP       | Server UDP Port  |
+#-------|------------- |-------|-----------------|------------------|
+  2       3              200     <PrivateIP>        20303

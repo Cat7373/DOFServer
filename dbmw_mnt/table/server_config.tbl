@@ -1,8 +1,8 @@
 # Type ============> 1: GameServer, 2: DB Server, 3: Monitor Server 4: 其它
-# Server Group ====> 1: 卡恩, 2: 狄瑞吉, 3: 希洛克, 4: 普雷, 99: first server
+# Server Group ====> 1: 卡恩, 2: 狄瑞吉, 3: 希洛克, 4: 普雷, 5: 凱西亞斯, 6: 赫尔德, 99: first server, 98: 开发 Server
 # Index ===========> GameServer 配置中的 channel_no, 60: DB 中繼server, 61: monitor server
-# Server IP =======> GameServer 配置中的 IP
-# Server UDP Port => GameServer 配置中的 UDP 端口
+# Server IP =======> 目标 IP
+# Server UDP Port => 目标 UDP 端口
 
 #-------|------------- |-------|-----------------|------------------|
 # Type  | Server Group | Index | Server IP       | Server UDP Port  |
