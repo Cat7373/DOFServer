@@ -12,3 +12,7 @@ My DOFServer
     * IP 修改
     * 环境要求
     * PVF
+* 初次运行初始化脚本
+    * 修改 IP
+    * 下载 PVF
+    * 删除 .gitkeep
