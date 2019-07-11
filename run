@@ -1,0 +1,129 @@
+# echo "##### stun start #####"
+cd /home/dxf/stun
+chmod 777 *
+rm -f /home/dxf/stun/pid/*.pid
+rm -rf /home/dxf/stun/log/*.*
+./df_stun_r start &
+
+# sleep 3
+# echo "##### monitor start #####"
+cd /home/dxf/monitor
+chmod 777 *
+rm -f /home/dxf/monitor/pid/*.pid
+rm -rf /home/dxf/monitor/log/*.*
+./df_monitor_r mnt_cain start &
+
+# sleep 3
+# echo "##### manager start #####"
+cd /home/dxf/manager
+chmod 777 *
+rm -f /home/dxf/manager/pid/*.pid
+rm -rf /home/dxf/manager/log/*.*
+./df_manager_r manager start &
+
+# sleep 3
+# echo "##### relay start #####"
+cd /home/dxf/relay
+chmod 777 *
+rm -f /home/dxf/relay/pid/*.pid
+rm -rf /home/dxf/relay/log/*.*
+./df_relay_r relay_200 start &
+
+# sleep 3
+# echo "##### bridge start #####"
+cd /home/dxf/bridge
+chmod 777 *
+rm -f /home/dxf/bridge/pid/*.pid
+rm -rf /home/dxf/bridge/log/*.*
+./df_bridge_r bridge start &
+
+# sleep 3
+# echo "##### channel start #####"
+cd /home/dxf/channel
+chmod 777 *
+rm -f /home/dxf/channel/pid/*.pid
+rm -rf /home/dxf/channel/log/*.*
+./df_channel_r channel start &
+
+# sleep 3
+# echo "##### dbmw_guild start #####"
+cd /home/dxf/dbmw_guild
+chmod 777 *
+rm -f /home/dxf/dbmw_guild/pid/*.pid
+rm -rf /home/dxf/dbmw_guild/log/*.*
+./df_dbmw_r dbmw_gld_cain start &
+
+# sleep 3
+# echo "##### dbmw_mnt start #####"
+cd /home/dxf/dbmw_mnt
+chmod 777 *
+rm -f /home/dxf/dbmw_mnt/pid/*.pid
+rm -rf /home/dxf/dbmw_mnt/log/*.*
+./df_dbmw_r dbmw_mnt_cain start &
+
+# sleep 3
+# echo "##### dbmw_stat start #####"
+cd /home/dxf/dbmw_stat
+chmod 777 *
+rm -f /home/dxf/dbmw_stat/pid/*.pid
+rm -rf /home/dxf/dbmw_stat/log/*.*
+./df_dbmw_r dbmw_stat_cain start &
+
+# sleep 3
+# echo "##### guild start #####"
+cd /home/dxf/guild
+chmod 777 *
+rm -f /home/dxf/guild/pid/*.pid
+rm -rf /home/dxf/guild/log/*.*
+./df_guild_r gld_cain start &
+
+# sleep 3
+# echo "##### statics start #####"
+cd /home/dxf/statics
+chmod 777 *
+rm -f /home/dxf/statics/pid/*.pid
+rm -rf /home/dxf/statics/log/*.*
+./df_statics_r stat_cain start &
+
+# sleep 3
+# echo "##### coserver start #####"
+cd /home/dxf/coserver
+chmod 777 *
+rm -f /home/dxf/coserver/pid/*.pid
+rm -rf /home/dxf/coserver/log/*.*
+./df_coserver_r coserver start &
+
+# sleep 3
+# echo "##### community start #####"
+cd /home/dxf/community
+chmod 777 *
+rm -f /home/dxf/community/pid/*.pid
+rm -rf /home/dxf/community/log/*.*
+./df_community_r community start &
+
+# sleep 3
+# echo "##### gunnersvr start #####"
+cd /home/dxf/secsvr/gunnersvr
+chmod 777 *
+rm -f /home/dxf/secsvr/gunnersvr/*.pid
+./gunnersvr -t30 -i1 &
+
+# sleep 3
+# echo "##### zergsvr start #####"
+cd /home/dxf/secsvr/zergsvr
+chmod 777 *
+rm -f /home/dxf/secsvr/zergsvr/*.pid
+./secagent  &
+./zergsvr -t30 -i1 &
+
+# sleep 3
+# echo "##### game start #####"
+cd /home/dxf/game
+chmod 777 *
+rm -rf /home/dxf/game/log/*
+./df_game_r cain01 start &
+
+# sleep 3
+# echo "##### pvp start #####"
+# ./df_game_r cain02 start &
+

@@ -1,0 +1,152 @@
+#注释
+
+VERSION		05CE86901D9A06F18ADC99D9EAB9224A
+
+#dib.type=1,2 1为local算法，2为dib文件
+
+dib.count	26
+
+#local
+dib1.id		1
+dib1.type	1
+dib1.file	cast.dib
+dib1.keylen	16
+
+dib2.id		2
+dib2.type	1
+dib2.file	desbig.dib
+dib2.keylen 8
+
+dib3.id		3
+dib3.type	1
+dib3.file	blowfish_8.dib
+dib3.keylen 8
+
+dib3.id		4
+dib3.type	1
+dib3.file	blowfish_16.dib
+dib3.keylen 16
+
+dib3.id		5
+dib3.type	1
+dib3.file	blowfish_24.dib
+dib3.keylen 24
+
+dib3.id		6
+dib3.type	1
+dib3.file	blowfish_32.dib
+dib3.keylen 32
+
+dib3.id		7
+dib3.type	1
+dib3.file	blowfish_56.dib
+dib3.keylen 56
+
+dib3.id		8
+dib3.type	1
+dib3.file	mars.dib
+dib3.keylen 16
+
+#dib
+dib3.id		9
+dib3.type	2
+dib3.file	adder.dib
+dib3.keylen 16
+
+dib3.id		10
+dib3.type	2
+dib3.file	d3des_161.dib
+dib3.keylen 16
+
+dib3.id		11
+dib3.type	2
+dib3.file	d3des_162.dib
+dib3.keylen 16
+
+dib3.id		12
+dib3.type	2
+dib3.file	des2p.dib
+dib3.keylen 8
+
+dib3.id		13
+dib3.type	2
+dib3.file	desmo.dib
+dib3.keylen 8
+
+dib3.id		14
+dib3.type	2
+dib3.file	desnew.dib
+dib3.keylen 15
+
+dib3.id		15
+dib3.type	2
+dib3.file	despc.dib
+dib3.keylen 8
+
+dib3.id		16
+dib3.type	2
+dib3.file	fastdes.dib
+dib3.keylen 8
+
+dib3.id		17
+dib3.type	2
+dib3.file	cast.dib
+dib3.keylen 16
+
+dib3.id		18
+dib3.type	2
+dib3.file	feal8.dib
+dib3.keylen 8
+
+dib3.id		19
+dib3.type	2
+dib3.file	gene.dib
+dib3.keylen 8
+
+dib3.id		20
+dib3.type	2
+dib3.file	gost.dib
+dib3.keylen 32
+
+dib3.id		21
+dib3.type	2
+dib3.file	idea.dib
+dib3.keylen 16
+
+dib3.id		22
+dib3.type	2
+dib3.file	cast.dib
+dib3.keylen 16
+
+dib3.id		23
+dib3.type	2
+dib3.file	rc6.dib
+dib3.keylen 16
+
+dib3.id		24
+dib3.type	2
+dib3.file	shift.dib
+dib3.keylen 8
+
+dib3.id		25
+dib3.type	2
+dib3.file	subtracter.dib
+dib3.keylen 8
+
+dib3.id		26
+dib3.type	2
+dib3.file	tean.dib
+dib3.keylen 16
+
+
+#key可取的dnf.exe的范围，v.start是发给client的起始地址+randstartoffset，antibotsvrd用f.start+randstartoffset
+keyrange.count 2
+keyrange1.v.start 1000
+keyrange1.f.start 1000
+keyrange1.len	  2000
+
+keyrange2.v.start 3000
+keyrange2.f.start 3000
+keyrange2.len	  2000
+
+
