@@ -1,8 +1,10 @@
-#field 구분은 tab으로 할것
-#Type ============> 1 : 게임서버, 2 : DB서버, 3 : 모니터서�? 4 : 기타
-#Server Group ====> 1 : 카인, 2 : 디레지�? 3 : 시로�? 4 : 프레�? 99 : 퍼스트서�?#Index ===========> 게임서버 설정파일�?channel_no, 60 : DB 미들웨어서버, 61 : 모니터서�?
-#Server UDP Port => 게임서버 설정파일�?udp_port
-#-------|-------------|-------|---------------|------------------|
-#Type   | Server Group| Index |  Server IP    | Server UDP Port  |
-#-------|-------------|-------|---------------|------------------|
-3               3       201     <PrivateIP>         30303
+# Type ============> 1: GameServer, 2: DB Server, 3: Monitor Server 4: 其它
+# Server Group ====> 1: 卡恩, 2: 狄瑞吉, 3: 希洛克, 4: 普雷, 99: first server
+# Index ===========> GameServer 配置中的 channel_no, 60: DB 中繼server, 61: monitor server
+# Server IP =======> GameServer 配置中的 IP
+# Server UDP Port => GameServer 配置中的 UDP 端口
+
+#-------|------------- |-------|-----------------|------------------|
+# Type  | Server Group | Index | Server IP       | Server UDP Port  |
+#-------|------------- |-------|-----------------|------------------|
+  3       3              201     <PrivateIP>       30303
