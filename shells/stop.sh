@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 killall -9 df_stun_r
 killall -9 df_monitor_r
 killall -9 df_manager_r

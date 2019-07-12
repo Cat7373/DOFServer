@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+# TODO 根据输入的参数，如 start、stop，来调用 shell 中的脚本
