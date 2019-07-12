@@ -4,8 +4,6 @@
 # 启动 DOFServer
 # ----------------------------------------------------------------------------
 
-# TODO 试试低权限用户
-
 # 跳到当前目录
 cd $(dirname "$0")
 
@@ -54,6 +52,12 @@ chmod +x df_statics_r
 ./df_statics_r stat_cain start &
 sleep 5
 
+echo "##### coserver start #####"
+cd ${SERVER_DIR}/coserver
+chmod +x df_coserver_r
+./df_coserver_r coserver start &
+sleep 5
+
 echo "##### dbmw_guild start #####"
 cd ${SERVER_DIR}/dbmw_guild
 chmod +x df_dbmw_r
@@ -72,16 +76,16 @@ chmod +x df_dbmw_r
 ./df_dbmw_r dbmw_stat_cain start &
 sleep 5
 
-echo "##### monitor start #####"
-cd ${SERVER_DIR}/monitor
-chmod +x df_monitor_r
-./df_monitor_r mnt_cain start &
-sleep 5
-
 echo "##### manager start #####"
 cd ${SERVER_DIR}/manager
 chmod +x df_manager_r
 ./df_manager_r manager start &
+sleep 5
+
+echo "##### monitor start #####"
+cd ${SERVER_DIR}/monitor
+chmod +x df_monitor_r
+./df_monitor_r mnt_cain start &
 sleep 5
 
 echo "##### relay start #####"
@@ -100,12 +104,6 @@ echo "##### guild start #####"
 cd ${SERVER_DIR}/guild
 chmod +x df_guild_r
 ./df_guild_r gld_cain start &
-sleep 5
-
-echo "##### coserver start #####"
-cd ${SERVER_DIR}/coserver
-chmod +x df_coserver_r
-./df_coserver_r coserver start &
 sleep 5
 
 echo "##### gunnersvr start #####"

@@ -45,15 +45,15 @@ echo "数据库 TEA 密码: ${DBTEAPass}"
 read -p "以上信息是否正确? (y/n): " answer
     case $answer in
         y|Y)
-            sed -i "s/<PrivateIP>/${privateIP}/g" `find . -type f -name "*.tbl"`
-            sed -i "s/<PrivateIP>/${privateIP}/g" `find . -type f -name "*.cfg"`
-            sed -i "s/<PublicIP>/${PublicIP}/g" `find . -type f -name "*.tbl"`
-            sed -i "s/<PublicIP>/${PublicIP}/g" `find . -type f -name "*.cfg"`
-            sed -i "s/<DBIP>/${DBIP}/g" `find . -type f -name "*.cfg"`
-            sed -i "s/<DBPORT>/${DBPort}/g" `find . -type f -name "*.cfg"`
-            sed -i "s/<DBUSER>/${DBUser}/g" `find . -type f -name "*.cfg"`
-            sed -i "s/<DBPASS>/${DBPass}/g" `find . -type f -name "*.cfg"`
-            sed -i "s/<DBHASHPASS>/${DBTEAPass}/g" `find . -type f -name "*.cfg"`
+            sed -i "s/<PrivateIP>/${privateIP}/g" `find ${SERVER_DIR} -type f -name "*.tbl"`
+            sed -i "s/<PrivateIP>/${privateIP}/g" `find ${SERVER_DIR} -type f -name "*.cfg"`
+            sed -i "s/<PublicIP>/${PublicIP}/g" `find ${SERVER_DIR} -type f -name "*.tbl"`
+            sed -i "s/<PublicIP>/${PublicIP}/g" `find ${SERVER_DIR} -type f -name "*.cfg"`
+            sed -i "s/<DBIP>/${DBIP}/g" `find ${SERVER_DIR} -type f -name "*.cfg"`
+            sed -i "s/<DBPORT>/${DBPort}/g" `find ${SERVER_DIR} -type f -name "*.cfg"`
+            sed -i "s/<DBUSER>/${DBUser}/g" `find ${SERVER_DIR} -type f -name "*.cfg"`
+            sed -i "s/<DBPASS>/${DBPass}/g" `find ${SERVER_DIR} -type f -name "*.cfg"`
+            sed -i "s/<DBHASHPASS>/${DBTEAPass}/g" `find ${SERVER_DIR} -type f -name "*.cfg"`
 
             echo "自动修改配置文件完成，请注意检查数据库中的连接信息是否正确."
             echo "您可以正常启动 DOFServer 了"
