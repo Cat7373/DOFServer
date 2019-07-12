@@ -34,4 +34,4 @@
 * &lt;DBPORT&gt;     数据库端口
 * &lt;DBUSER&gt;     数据库用户名
 * &lt;DBPASS&gt;     数据库密码
-* &lt;DBHASHPASS&gt; 经过 Hash 后的数据库密码 <!-- TODO Hash 算法？ -->
+* &lt;DBHASHPASS&gt; 经过 TEA 加密后的数据库密码 <!-- TODO Hash 算法？ -->
