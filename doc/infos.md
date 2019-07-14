@@ -13,8 +13,8 @@
 | 10031 | TCP | √ | × | √ | PVP 频道 |
 | 11011 | UDP | √ | × | √ | 刷图频道 |
 | 11031 | UDP | √ | × | √ | PVP 频道 |
-| 20018 | TCP | √ | × | √ | 刷图频道 ? |
-| 20020 | TCP | √ | × | √ | PVP 频道 ? |
+| 20018 | TCP | √ | × | × | 刷图频道 exchange |
+| 20020 | TCP | √ | × | × | PVP 频道 exchange |
 | 20203 | TCP/UDP | √ | × | × | dbmw_mnt 使用 |
 | 20303 | TCP/UDP | √ | × | × | dbmw_stat 使用 |
 | 20403 | TCP/UDP | √ | × | × | dbmw_guild 使用 |
