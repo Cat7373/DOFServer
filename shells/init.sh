@@ -55,6 +55,8 @@ read -p "以上信息是否正确? (y/n): " answer
             sed -i "s/<DBPASS>/${DBPass}/g" `find ${SERVER_DIR} -type f -name "*.cfg"`
             sed -i "s/<DBHASHPASS>/${DBTEAPass}/g" `find ${SERVER_DIR} -type f -name "*.cfg"`
 
+            # TODO 自动连接 MySQL 修改 db_connect
+
             echo "自动修改配置文件完成，请注意检查数据库中的连接信息是否正确."
             echo "您可以正常启动 DOFServer 了"
             ;;

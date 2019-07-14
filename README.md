@@ -2,8 +2,8 @@
 My DOFServer
 
 ## 环境要求
-* CentOS 5.x (推荐 5.11)
-* MySQL 5.x (推荐 5.5)
+* CentOS 5.x (推荐 5.8)
+* MySQL 5.x
 * 存储空间 >= 15GB
 
 ## 部署流程

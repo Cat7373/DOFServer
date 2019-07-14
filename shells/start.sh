@@ -22,9 +22,9 @@ export LD_LIBRARY_PATH=${SERVER_DIR}/lib
 
 # 移除 pid 文件、日志、Core 文件
 echo "Start removing junk files."
-find ${SERVER_DIR} -name *.pid | xargs rm -fv
-find ${SERVER_DIR} -name *.log | xargs rm -fv
-find ${SERVER_DIR} -name core.* | xargs rm -fv
+find ${SERVER_DIR} -name '*.pid' -type f | xargs rm -fv
+find ${SERVER_DIR} -name '*.log' -type f | xargs rm -fv
+find ${SERVER_DIR} -name 'core.*' -type f | xargs rm -fv
 echo "End junk file removal."
 sleep 1
 
