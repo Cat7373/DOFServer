@@ -106,6 +106,12 @@ chmod +x df_guild_r
 ./df_guild_r gld_cain start &
 sleep 3
 
+echo "##### auction start #####"
+cd ${SERVER_DIR}/auction
+chmod +x df_auction_r
+./df_auction_r ./cfg/auction_siro.cfg start ./df_auction_r &
+sleep 3
+
 echo "##### gunnersvr start #####"
 cd ${SERVER_DIR}/secsvr/gunnersvr
 chmod +x gunnersvr

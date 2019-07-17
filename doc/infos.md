@@ -21,9 +21,9 @@
 | 30303 | TCP/UDP | √ | × | × | monitor 使用 |
 | 30403 | TCP/UDP | √ | × | × | guild 使用 |
 | 30503 | UDP | √ | × | × | statics 使用 |
-| 30603 | TCP/UDP | × | √ | ? | 金币寄售(point) |
+| 30603 | TCP/UDP | × | √ | × | 金币寄售(point) |
 | 30701 | UDP | √ | × | × | Coserver 使用 |
-| 30803 | TCP/UDP | × | √ | ? | 拍卖行(auction) |
+| 30803 | TCP/UDP | √ | × | × | 拍卖行(auction) |
 | 31100 | TCP | √ | × | × | Community 使用 |
 | 40401 | TCP/UDP | √ | × | × | manager 使用 |
 
