@@ -25,6 +25,7 @@ echo "Start removing junk files."
 find ${SERVER_DIR} -name '*.pid' -type f | xargs rm -fv
 find ${SERVER_DIR} -name '*.log' -type f | xargs rm -fv
 find ${SERVER_DIR} -name 'core.*' -type f | xargs rm -fv
+rm -rfv ${SERVER_DIR}/game/log/*
 echo "End junk file removal."
 sleep 1
 
